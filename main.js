@@ -10,7 +10,11 @@ console.log(hiddenNumber);
 
 function compareNumber(){
     let guessedNum = parseInt(guess.value);
-    if(guessedNum > hiddenNumber){
+    if(guessedNum == hiddenNumber){
+        message.innerHTML = "Congratulations!, You guessed the secret number!";
+        message.style.color = "green";
+     }
+    else if(guessedNum > hiddenNumber){
         message.innerHTML = "Too High, try again..";
         message.style.color = "red";
     }
@@ -18,10 +22,10 @@ function compareNumber(){
         message.innerHTML = "Too Low, try again..";
         message.style.color = "red";
     }
-     else{
-        message.innerHTML = "Congratulations!, You guessed the secret number!";
-        message.style.color = "green";
-     }
+    else{
+        message.innerHTML = "Please enter the number!";
+        message.style.color = "red";
+    }
 
 };
 
